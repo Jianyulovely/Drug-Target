@@ -14,7 +14,7 @@ We constructed a drug similarity matrix $S_D$ and a protein similarity matrix
 $S_P$ by cosine similarity of the corresponding cached feature vectors. These
 similarities were feature-derived and were not calculated from DTI labels.
 
-\begin{figure}[t]
+\begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{figures/figure_1_method_schematic.pdf}
 \caption{Overview of the full ArnoldiGCL-S1/S2 DTI predictor. Drug Morgan
@@ -26,7 +26,7 @@ edges only. Structural pair features, raw features and side information are
 then combined by an edge scorer. Validation and test DTI labels are excluded
 from graph and side-information construction.}
 \label{fig:method-overview}
-\end{figure}
+\end{figure*}
 
 \subsection{Leakage-safe graph construction}
 For every outer fold, the graph contained only positive DTI edges from the

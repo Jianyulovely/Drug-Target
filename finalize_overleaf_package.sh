@@ -44,6 +44,7 @@ fi
 REMOTE_HOST="fulaiyi@frp-arm.com"
 REMOTE_PORT="20752"
 REMOTE_ROOT="/mnt/sda/fulaiyi/dti_paper_20260826_v2"
+REMOTE_MANUSCRIPT_FIGURES="/mnt/sda/fulaiyi/yinjianyu/Drug-Target/manuscript/figures"
 REMOTE_PYTHON="/mnt/sda/fulaiyi/aspect_env/bin/python"
 LOCAL_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/manuscript"
 CHECK_LOCAL_PLACEHOLDERS=0
@@ -61,6 +62,8 @@ Options:
   --remote-host USER@HOST  SSH destination (default: fulaiyi@frp-arm.com)
   --remote-port PORT       SSH port (default: 20752)
   --remote-root PATH       Remote experiment root
+  --remote-manuscript-figures PATH
+                           Remote manuscript figures directory
   --remote-python PATH     Remote Python interpreter
   --local-root PATH        Local manuscript directory
   --check-local-placeholders  Validate generated and publication TODO gates only
@@ -79,6 +82,7 @@ while (($#)); do
         --remote-host) REMOTE_HOST="$2"; shift 2 ;;
         --remote-port) REMOTE_PORT="$2"; shift 2 ;;
         --remote-root) REMOTE_ROOT="$2"; shift 2 ;;
+        --remote-manuscript-figures) REMOTE_MANUSCRIPT_FIGURES="$2"; shift 2 ;;
         --remote-python) REMOTE_PYTHON="$2"; shift 2 ;;
         --local-root) LOCAL_ROOT="$2"; shift 2 ;;
         --check-local-placeholders) CHECK_LOCAL_PLACEHOLDERS=1; shift ;;
@@ -165,6 +169,7 @@ write_overleaf_zip() {
     local relative_path
     local -a required_paths=(
         "main.tex"
+        "IEEEtran.cls"
         "README.md"
         "references.bib"
         "sections/methods.tex"
@@ -304,19 +309,19 @@ remote_ssh "$(printf '%q ' "${remote_generate[@]}")"
 
 mkdir -p "$LOCAL_ROOT/figures" "$LOCAL_ROOT/generated" "$LOCAL_ROOT/source_data" "$LOCAL_ROOT/tables"
 echo "[10/10] Synchronizing audited artifacts and compiling the local manuscript"
-if ! remote_ssh "test -d $(printf '%q' "$REMOTE_ROOT/manuscript/figures")"; then
-    echo "Remote manuscript figures directory is missing: $REMOTE_ROOT/manuscript/figures" >&2
-    exit 1
-fi
-remote_scp -rp \
-    "$REMOTE_HOST:$REMOTE_ROOT/manuscript/figures/." \
-    "$LOCAL_ROOT/figures/"
 for extension in svg pdf png tiff; do
     remote_scp -p \
         "$REMOTE_HOST:$REMOTE_ROOT/figures/figure_2_baselines.$extension" \
         "$REMOTE_HOST:$REMOTE_ROOT/figures/figure_3_ablation.$extension" \
         "$LOCAL_ROOT/figures/"
 done
+if ! remote_ssh "test -d $(printf '%q' "$REMOTE_MANUSCRIPT_FIGURES")"; then
+    echo "Remote manuscript figures directory is missing: $REMOTE_MANUSCRIPT_FIGURES" >&2
+    exit 1
+fi
+remote_scp -rp \
+    "$REMOTE_HOST:$REMOTE_MANUSCRIPT_FIGURES/." \
+    "$LOCAL_ROOT/figures/"
 for filename in fold_metrics.csv summary_metrics.csv paired_wilcoxon_statistics.csv dataset_manifest.json environment_manifest.json; do
     remote_scp -p "$REMOTE_HOST:$REMOTE_ROOT/source_data/$filename" "$LOCAL_ROOT/source_data/$filename"
 done

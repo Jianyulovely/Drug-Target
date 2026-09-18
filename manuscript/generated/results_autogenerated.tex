@@ -4,16 +4,16 @@
 
 Tables~\ref{tab:benchmark-aupr} and \ref{tab:benchmark-auc} report test performance from the complete frozen-fold benchmark. The accompanying source-data CSV records every seed--fold value and the paired-comparison file contains raw and Benjamini--Hochberg-adjusted Wilcoxon $p$-values.
 
-\begin{figure}[t]
+\begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{figures/figure_2_baselines.pdf}
 \caption{Comparison of feature-only, graph-based, bilinear-attention and full S1/S2 models across the four fixed split scenarios. Each point is the mean of 15 seed--fold evaluations and the shaded band denotes the sample standard deviation.}
 \label{fig:baseline-comparison}
-\end{figure}
+\end{figure*}
 
 Across the 12 prespecified dataset--split conditions, ArnoldiGCL-S1/S2 had the highest mean AUPR among the principal baselines in 7/12 conditions. The conditions without the highest mean AUPR were BioSNAP Cold protein, Human Cold protein, Human Cold pair, BindingDB Cold protein, BindingDB Cold pair.
 
-\begin{table}[t]
+\begin{table*}[t]
 \centering
 \scriptsize
 \resizebox{\textwidth}{!}{%
@@ -40,9 +40,9 @@ BindingDB & Cold pair & 0.093 $\pm$ 0.006 & 0.467 $\pm$ 0.054 & 0.095 $\pm$ 0.01
 }
 \caption{Test AUPR for the principal baseline comparison. Values are mean $\pm$ sample standard deviation across 15 fixed seed--fold evaluations.}
 \label{tab:benchmark-aupr}
-\end{table}
+\end{table*}
 
-\begin{table}[t]
+\begin{table*}[t]
 \centering
 \scriptsize
 \resizebox{\textwidth}{!}{%
@@ -69,20 +69,20 @@ BindingDB & Cold pair & 0.533 $\pm$ 0.028 & 0.820 $\pm$ 0.032 & 0.515 $\pm$ 0.04
 }
 \caption{Test AUC for the principal baseline comparison. Values are mean $\pm$ sample standard deviation across 15 fixed seed--fold evaluations.}
 \label{tab:benchmark-auc}
-\end{table}
+\end{table*}
 
 \subsection{Contribution of S1 and S2}
 
 Table~\ref{tab:ablation-aupr} reports the prespecified structural-only, single-module and shuffled controls. Relative to the structural-only variant, the full S1/S2 model had higher mean AUPR in 11/12 conditions; among these, 11 had a descriptive paired Wilcoxon contrast with BH-adjusted $p<0.05$. The positive mean differences ranged from 0.013 to 0.396. The full model was not higher than the structural-only variant in Human Cold pair.
 
-\begin{figure}[t]
+\begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{figures/figure_3_ablation.pdf}
 \caption{Ablation of S1/S2 side information. The shuffled control preserves the marginal values of the seven descriptors within each partition but disrupts their association with candidate drug--protein pairs. Each point is the mean of 15 seed--fold evaluations and the shaded band denotes the sample standard deviation.}
 \label{fig:side-information-ablation}
-\end{figure}
+\end{figure*}
 
-\begin{table}[t]
+\begin{table*}[t]
 \centering
 \scriptsize
 \resizebox{\textwidth}{!}{%
@@ -109,7 +109,7 @@ BindingDB & Cold pair & 0.118 $\pm$ 0.019 & 0.365 $\pm$ 0.078 & 0.145 $\pm$ 0.02
 }
 \caption{Test AUPR for the S1/S2 ablations and shuffled control. Values are mean $\pm$ sample standard deviation across 15 fixed seed--fold evaluations.}
 \label{tab:ablation-aupr}
-\end{table}
+\end{table*}
 
 \subsection{Where the method does not improve}
 

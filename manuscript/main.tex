@@ -1,24 +1,30 @@
-\documentclass[11pt]{article}
-\usepackage[margin=1in]{geometry}
-\usepackage[T1]{fontenc}
-\usepackage{lmodern}
-\usepackage{microtype}
-\usepackage{booktabs}
-\usepackage{amsmath,amssymb}
-\usepackage{xcolor}
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+\usepackage{amsmath,amssymb,amsfonts}
 \usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{array}
 \usepackage[hidelinks]{hyperref}
+
+\geometry{a4paper,left=2cm,right=2cm,top=2.5cm,bottom=4cm}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 
 \newcommand{\todo}[1]{\textcolor{red}{[TODO: #1]}}
 \newcommand{\method}{ArnoldiGCL-S1/S2}
 \newcommand{\dti}{drug--target interaction}
 
-\title{Leakage-safe similarity-neighbour side information for graph-based drug--target interaction prediction}
-\author{Laiyi Fu\textsuperscript{1} \quad Jianyu Yin\textsuperscript{2}\\
-\textsuperscript{1}School of Automation Science and Engineering, Xi'an Jiaotong University, Xi'an, Shaanxi, China\\
-\textsuperscript{2}Xi'an Jiaotong University, Xi'an, Shaanxi, China\\
-\texttt{3125354034@stu.xjtu.edu.cn}}
-\date{}
+\title{Leakage Safe Similarity Neighbour Side Information for Graph Based Drug Target Interaction Prediction}
+
+\author{
+    \IEEEauthorblockN{Laiyi Fu\textsuperscript{1}, Jianyu Yin\textsuperscript{2}}
+    \IEEEauthorblockA{1. School of Automation Science and Engineering, Xi'an Jiaotong University, Xi'an, Shaanxi, China}
+    \IEEEauthorblockA{2. Xi'an Jiaotong University, Xi'an, Shaanxi, China}
+    \IEEEauthorblockA{3125354034@stu.xjtu.edu.cn}
+}
 
 \begin{document}
 \maketitle
@@ -30,6 +36,11 @@
   \todo{Write only after all fixed-fold results, effect sizes and limitations are finalized.}%
 }
 \end{abstract}
+
+\begin{IEEEkeywords}
+drug target interaction prediction, graph neural networks, similarity neighbours,
+data leakage, cold start evaluation
+\end{IEEEkeywords}
 
 \section{Introduction}
 Inferring drug--target interactions (DTIs) from molecular and protein
@@ -83,10 +94,16 @@ alternatives.
 
 \input{sections/data_availability}
 
-\section*{Declarations}
-\noindent\textbf{Author contributions.} \todo{To be completed by the authors.}
+\section*{Acknowledgment}
+The authors thank the maintainers of the public datasets and software used in
+this study.
 
-\noindent\textbf{Competing interests.} \todo{To be completed by the authors.}
+\section*{Declarations}
+\noindent\textbf{Author contributions.} Laiyi Fu conducted the study and
+prepared the manuscript. Jianyu Yin contributed to the methodology and
+manuscript review.
+
+\noindent\textbf{Competing interests.} The authors declare no competing interests.
 
 \bibliographystyle{unsrt}
 \bibliography{references}

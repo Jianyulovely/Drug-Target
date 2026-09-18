@@ -46,6 +46,13 @@ Zeming Lin, Halil Akin, Roshan Rao, Brian Hie, Zhongkai Zhu, Wenting Lu, Nikita
   a language model.
 \newblock {\em Science}, 379(6637):1123--1130, 2023.
 
+\bibitem{coskun2025arnoldigcl}
+Mustafa Coskun, Abdelkader Baggag, and Mehmet Koyut{\"u}rk.
+\newblock {ArnoldiGCL}: Graph contrastive learning via learnable arnoldi-based
+  guided spectral chebyshev polynomial filters.
+\newblock In {\em Proceedings of the 31st ACM SIGKDD Conference on Knowledge
+  Discovery and Data Mining V.2}, pages 380--391, 2025.
+
 \bibitem{liu2007bindingdb}
 T.~Liu, Y.~Lin, X.~Wen, R.~N. Jorissen, and M.~K. Gilson.
 \newblock {BindingDB}: a web-accessible database of experimentally determined

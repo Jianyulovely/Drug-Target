@@ -51,7 +51,7 @@ def tabular(
     columns = "ll" + "c" * len(methods)
     header = "Dataset & Split & " + " & ".join(latex_escape(results.METHOD_LABELS[m]) for m in methods) + r" \\"
     lines = [
-        r"\begin{table}[t]",
+        r"\begin{table*}[t]",
         r"\centering",
         r"\scriptsize",
         r"\resizebox{\textwidth}{!}{%",
@@ -75,7 +75,7 @@ def tabular(
             r"}",
             rf"\caption{{{caption} Values are mean $\pm$ sample standard deviation across 15 fixed seed--fold evaluations.}}",
             rf"\label{{{label}}}",
-            r"\end{table}",
+            r"\end{table*}",
         ]
     )
     return "\n".join(lines)
@@ -84,12 +84,12 @@ def tabular(
 def figure_block(filename: str, caption: str, label: str) -> str:
     return "\n".join(
         [
-            r"\begin{figure}[t]",
+            r"\begin{figure*}[t]",
             r"\centering",
             rf"\includegraphics[width=\textwidth]{{figures/{filename}.pdf}}",
             rf"\caption{{{caption}}}",
             rf"\label{{{label}}}",
-            r"\end{figure}",
+            r"\end{figure*}",
         ]
     )
 
