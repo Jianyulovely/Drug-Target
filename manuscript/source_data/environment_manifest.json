@@ -1,0 +1,52 @@
+{
+  "external_core": {
+    "environment_variable": "DTI_CORE_PATH",
+    "path": "/mnt/sda/fulaiyi/cross_dataset_v9_cold_aware.py",
+    "sha256": "91c75eabce9945a0a4367a46fa84cda780cdfca4aec35d693e52b53ff252a61f"
+  },
+  "generated_at_utc": "2026-09-18T03:16:04.123536+00:00",
+  "key_script_sha256": {
+    "final_paper_audit.py": "fad49642e53eb17a0589773746d290c57d249a5f038c53e2a8a041e804cb2099",
+    "generate_manuscript_results.py": "65be07961fc6550c768071a900ad2d5d36201fe73e142b6978b5878c851e6d03",
+    "paper_benchmark.py": "aaf0371166604bc63592179d15addb2829ff14c379ba47f0852f8de1937ab5aa",
+    "plot_paper_results.py": "f56c335ad61f6b3eee0f2714e19c40d1d3d91ac6b09b7e30fbe3d238e7aa8213",
+    "postprocess_after_drugban.sh": "c1beee28455eac72104ec1aab48cceaf704fc971bbfab128a182d534a4889415",
+    "prepare_drugban_splits.py": "218d7a5529f1fc6b312581b9cbc8307ae8961b622a1559ac737704acce28a90e",
+    "run_drugban_fold.py": "3113757f0d165bb2797ea501ae5288e886c902c65dc97b99c2494124c120f6cb",
+    "run_drugban_queue.sh": "76721865f5928ff91ea6e9416976f4d312b964ae86024a9e6e0bd3329e39f19f",
+    "verify_paper_coverage.py": "d86554309e7d5dc8ff3f6fc990dec6144df5d7e077841f78d17b44133e4fbf8a",
+    "verify_split_integrity.py": "965ccd6cc31a77b9fd3a4ca5c817bfe311ed260f68b7fc751076244355b78490",
+    "write_dataset_manifest.py": "c536caf42ccf176d1e912a9e35768189493c8f0829bf15d49431c3f4363162fd",
+    "write_environment_manifest.py": "b64d4bed41c49b5b50fd3c1187e60348b5cadb5db53b8aa8c1b4d125e39966bf"
+  },
+  "nvidia_smi": [
+    "NVIDIA GeForce RTX 4080 SUPER, 550.90.07, 32760 MiB",
+    "NVIDIA GeForce RTX 4080 SUPER, 550.90.07, 32760 MiB",
+    "NVIDIA GeForce RTX 4080 SUPER, 550.90.07, 32760 MiB",
+    "NVIDIA GeForce RTX 4080 SUPER, 550.90.07, 32760 MiB"
+  ],
+  "packages": {
+    "matplotlib": "3.10.9",
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "rdkit": "2023.9.6",
+    "scikit-learn": "1.7.2",
+    "scipy": "1.15.3",
+    "torch": "2.5.0+cu124"
+  },
+  "python": {
+    "executable": "/mnt/sda/fulaiyi/aspect_env/bin/python",
+    "implementation": "CPython",
+    "platform": "Linux-6.8.0-90-generic-x86_64-with-glibc2.35",
+    "version": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]"
+  },
+  "schema_version": 1,
+  "torch": {
+    "available": true,
+    "cuda_available": true,
+    "cuda_device_count": 4,
+    "cuda_version": "12.4",
+    "cudnn_version": 90100,
+    "version": "2.5.0+cu124"
+  }
+}

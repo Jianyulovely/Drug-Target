@@ -1,0 +1,24 @@
+\section{Data and code availability}
+
+\noindent\textbf{Generated benchmark artifacts.} The frozen train, validation
+and test partitions, per-fold result JSON files, aggregate tables, figure source
+data and the dataset manifest generated in this study will be deposited in
+\todo{repository name and persistent identifier} before publication. The
+manifest records the SHA256 checksum, Git-blob checksum, observed schema and
+pinned upstream snapshot of every input CSV used for the benchmark.
+
+\noindent\textbf{Reused input data.} The benchmark uses local CSV files labelled
+BioSNAP, Human and BindingDB. Each file was verified byte-for-byte against the
+corresponding \texttt{full.csv} file in the DrugBAN repository dataset snapshot
+(commit \texttt{9923f8c99959e00263103ff9ac61ba0eaccc8e02}); that snapshot
+documents BindingDB, MolTrans/BioSNAP and TransformerCPI/Human as the respective
+sources \cite{bai2023drugban,liu2007bindingdb,huang2021moltrans,chen2020transformercpi}.
+The DrugBAN repository is MIT-licensed; original data-provider terms govern
+reuse and redistribution, so this manuscript does not claim that the local
+copies may be redistributed.
+
+\noindent\textbf{Code availability.} The frozen split generator, benchmark
+runners, plotting scripts, manuscript generators and final audit script will be
+made available at \todo{code repository and commit or release tag}. The release
+will include environment specifications and commands required to regenerate the
+reported tables and figures from the archived result artifacts.

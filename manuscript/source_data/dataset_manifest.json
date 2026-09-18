@@ -1,0 +1,97 @@
+{
+  "schema_version": 2,
+  "provenance_note": "Exact content match is checked against a pinned Git blob; this does not replace the original providers' licence and terms-of-use review.",
+  "datasets": [
+    {
+      "dataset": "biosnap",
+      "file": "/mnt/sda/fulaiyi/DTI_datasets/biosnap_full.csv",
+      "sha256": "b0155eb273f0ceea2b883c2eb66108365e679c1d66c96cef413133257f991585",
+      "git_blob_sha1": "8075689605257768b88eacb361b8ee7c2e7c3be5",
+      "bytes": 17069326,
+      "columns": [
+        "SMILES",
+        "Protein",
+        "Y",
+        "drug_cluster",
+        "target_cluster"
+      ],
+      "rows": 27464,
+      "unique_smiles": 4505,
+      "unique_proteins": 2181,
+      "positive_rows": 13830,
+      "negative_rows": 13634,
+      "provenance": {
+        "exact_upstream_snapshot_match": true,
+        "upstream_repository": "https://github.com/peizhenbai/DrugBAN",
+        "upstream_commit": "9923f8c99959e00263103ff9ac61ba0eaccc8e02",
+        "upstream_commit_url": "https://github.com/peizhenbai/DrugBAN/tree/9923f8c99959e00263103ff9ac61ba0eaccc8e02",
+        "repository_path": "datasets/biosnap/full.csv",
+        "git_blob_sha1": "8075689605257768b88eacb361b8ee7c2e7c3be5",
+        "documented_origin": "BioSNAP dataset distributed by MolTrans",
+        "documented_origin_url": "https://github.com/kexinhuang12345/MolTrans",
+        "citation_key": "huang2021moltrans",
+        "licence_note": "The DrugBAN repository is MIT-licensed, but the original dataset providers' terms govern data reuse and redistribution."
+      }
+    },
+    {
+      "dataset": "human",
+      "file": "/mnt/sda/fulaiyi/DTI_datasets/human_full.csv",
+      "sha256": "ccda331c2697dbd12c96e5c4e855e98f162b9766086d945913bd0b90154aede3",
+      "git_blob_sha1": "711273c6f6da565ade72ad9ef615521f6743f293",
+      "bytes": 4536574,
+      "columns": [
+        "SMILES",
+        "Protein",
+        "Y"
+      ],
+      "rows": 6728,
+      "unique_smiles": 2726,
+      "unique_proteins": 2001,
+      "positive_rows": 3364,
+      "negative_rows": 3364,
+      "provenance": {
+        "exact_upstream_snapshot_match": true,
+        "upstream_repository": "https://github.com/peizhenbai/DrugBAN",
+        "upstream_commit": "9923f8c99959e00263103ff9ac61ba0eaccc8e02",
+        "upstream_commit_url": "https://github.com/peizhenbai/DrugBAN/tree/9923f8c99959e00263103ff9ac61ba0eaccc8e02",
+        "repository_path": "datasets/human/full.csv",
+        "git_blob_sha1": "711273c6f6da565ade72ad9ef615521f6743f293",
+        "documented_origin": "Human dataset distributed by TransformerCPI",
+        "documented_origin_url": "https://github.com/lifanchen-simm/transformerCPI",
+        "citation_key": "chen2020transformercpi",
+        "licence_note": "The DrugBAN repository is MIT-licensed, but the original dataset providers' terms govern data reuse and redistribution."
+      }
+    },
+    {
+      "dataset": "bindingdb",
+      "file": "/mnt/sda/fulaiyi/DTI_datasets/bindingdb_full.csv",
+      "sha256": "5968c567769f33884c23aeb97bdea2a432d2fa2368e4ec41499e60905a2f6ff0",
+      "git_blob_sha1": "a9aad592e945505bf22c5bd606e700b189181ba1",
+      "bytes": 37552074,
+      "columns": [
+        "SMILES",
+        "Protein",
+        "Y",
+        "drug_cluster",
+        "target_cluster"
+      ],
+      "rows": 49199,
+      "unique_smiles": 14643,
+      "unique_proteins": 2623,
+      "positive_rows": 20674,
+      "negative_rows": 28525,
+      "provenance": {
+        "exact_upstream_snapshot_match": true,
+        "upstream_repository": "https://github.com/peizhenbai/DrugBAN",
+        "upstream_commit": "9923f8c99959e00263103ff9ac61ba0eaccc8e02",
+        "upstream_commit_url": "https://github.com/peizhenbai/DrugBAN/tree/9923f8c99959e00263103ff9ac61ba0eaccc8e02",
+        "repository_path": "datasets/bindingdb/full.csv",
+        "git_blob_sha1": "a9aad592e945505bf22c5bd606e700b189181ba1",
+        "documented_origin": "BindingDB public database",
+        "documented_origin_url": "https://www.bindingdb.org/bind/index.jsp",
+        "citation_key": "liu2007bindingdb",
+        "licence_note": "The DrugBAN repository is MIT-licensed, but the original dataset providers' terms govern data reuse and redistribution."
+      }
+    }
+  ]
+}

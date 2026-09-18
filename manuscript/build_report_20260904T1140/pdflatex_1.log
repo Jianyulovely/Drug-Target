@@ -1,0 +1,110 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./manuscript/main.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-02-20>
+(/usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2024/texmf-dist/tex/latex/base/size11.clo))
+(/usr/local/texlive/2024/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifvtex.sty
+(/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/iftex.sty)))
+(/usr/local/texlive/2024/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/lm/lmodern.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/microtype-pdftex.def)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/local/texlive/2024/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/local/texlive/2024/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-def/pdftex.def)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)))
+(/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/local/texlive/2024/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2024/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/local/texlive/2024/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/auxhook/auxhook.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty (/usr/local/texlive/2024/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2024/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/local/texlive/2024/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/local/texlive/2024/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2024/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+))) (/usr/local/texlive/2024/texmf-dist/tex/latex/lm/t1lmr.fd)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+No file main.aux.
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-cmr.cfg)
+(/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(/usr/local/texlive/2024/texmf-dist/tex/latex/lm/ot1lmr.fd)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/lm/omllmm.fd)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/lm/omslmsy.fd)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/lm/omxlmex.fd)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-msa.cfg)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-msb.cfg)
+
+LaTeX Warning: Citation `ozturk2018deepdta' on page 1 undefined on input line 3
+7.
+
+
+LaTeX Warning: Citation `nguyen2021graphdta' on page 1 undefined on input line 
+37.
+
+
+LaTeX Warning: Citation `bai2023drugban' on page 1 undefined on input line 37.
+
+
+LaTeX Warning: Citation `liu2016nrlmf' on page 1 undefined on input line 48.
+
+
+LaTeX Warning: Citation `luo2017dtinet' on page 1 undefined on input line 48.
+
+
+! LaTeX Error: File `sections/methods.tex' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: tex)
+
+Enter file name: 
+! Emergency stop.
+<read *> 
+         
+l.66 \input{sections/methods}
+                             ^^M
+!  ==> Fatal error occurred, no output PDF file produced!
+Transcript written on manuscript/build_report_20260904T1140/main.log.

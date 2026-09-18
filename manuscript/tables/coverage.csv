@@ -1,0 +1,121 @@
+method,method_label,dataset,scenario,n_completed
+arnoldi_s1,ArnoldiGCL + S1,bindingdb,cold_drug,15
+arnoldi_s1,ArnoldiGCL + S1,bindingdb,cold_pair,15
+arnoldi_s1,ArnoldiGCL + S1,bindingdb,cold_protein,15
+arnoldi_s1,ArnoldiGCL + S1,bindingdb,random,15
+arnoldi_s1,ArnoldiGCL + S1,biosnap,cold_drug,15
+arnoldi_s1,ArnoldiGCL + S1,biosnap,cold_pair,15
+arnoldi_s1,ArnoldiGCL + S1,biosnap,cold_protein,15
+arnoldi_s1,ArnoldiGCL + S1,biosnap,random,15
+arnoldi_s1,ArnoldiGCL + S1,human,cold_drug,15
+arnoldi_s1,ArnoldiGCL + S1,human,cold_pair,15
+arnoldi_s1,ArnoldiGCL + S1,human,cold_protein,15
+arnoldi_s1,ArnoldiGCL + S1,human,random,15
+arnoldi_s12,ArnoldiGCL + S1+S2,bindingdb,cold_drug,15
+arnoldi_s12,ArnoldiGCL + S1+S2,bindingdb,cold_pair,15
+arnoldi_s12,ArnoldiGCL + S1+S2,bindingdb,cold_protein,15
+arnoldi_s12,ArnoldiGCL + S1+S2,bindingdb,random,15
+arnoldi_s12,ArnoldiGCL + S1+S2,biosnap,cold_drug,15
+arnoldi_s12,ArnoldiGCL + S1+S2,biosnap,cold_pair,15
+arnoldi_s12,ArnoldiGCL + S1+S2,biosnap,cold_protein,15
+arnoldi_s12,ArnoldiGCL + S1+S2,biosnap,random,15
+arnoldi_s12,ArnoldiGCL + S1+S2,human,cold_drug,15
+arnoldi_s12,ArnoldiGCL + S1+S2,human,cold_pair,15
+arnoldi_s12,ArnoldiGCL + S1+S2,human,cold_protein,15
+arnoldi_s12,ArnoldiGCL + S1+S2,human,random,15
+arnoldi_s12_shuffle,ArnoldiGCL + shuffled S1+S2,bindingdb,cold_drug,15
+arnoldi_s12_shuffle,ArnoldiGCL + shuffled S1+S2,bindingdb,cold_pair,15
+arnoldi_s12_shuffle,ArnoldiGCL + shuffled S1+S2,bindingdb,cold_protein,15
+arnoldi_s12_shuffle,ArnoldiGCL + shuffled S1+S2,bindingdb,random,15
+arnoldi_s12_shuffle,ArnoldiGCL + shuffled S1+S2,biosnap,cold_drug,15
+arnoldi_s12_shuffle,ArnoldiGCL + shuffled S1+S2,biosnap,cold_pair,15
+arnoldi_s12_shuffle,ArnoldiGCL + shuffled S1+S2,biosnap,cold_protein,15
+arnoldi_s12_shuffle,ArnoldiGCL + shuffled S1+S2,biosnap,random,15
+arnoldi_s12_shuffle,ArnoldiGCL + shuffled S1+S2,human,cold_drug,15
+arnoldi_s12_shuffle,ArnoldiGCL + shuffled S1+S2,human,cold_pair,15
+arnoldi_s12_shuffle,ArnoldiGCL + shuffled S1+S2,human,cold_protein,15
+arnoldi_s12_shuffle,ArnoldiGCL + shuffled S1+S2,human,random,15
+arnoldi_s2,ArnoldiGCL + S2,bindingdb,cold_drug,15
+arnoldi_s2,ArnoldiGCL + S2,bindingdb,cold_pair,15
+arnoldi_s2,ArnoldiGCL + S2,bindingdb,cold_protein,15
+arnoldi_s2,ArnoldiGCL + S2,bindingdb,random,15
+arnoldi_s2,ArnoldiGCL + S2,biosnap,cold_drug,15
+arnoldi_s2,ArnoldiGCL + S2,biosnap,cold_pair,15
+arnoldi_s2,ArnoldiGCL + S2,biosnap,cold_protein,15
+arnoldi_s2,ArnoldiGCL + S2,biosnap,random,15
+arnoldi_s2,ArnoldiGCL + S2,human,cold_drug,15
+arnoldi_s2,ArnoldiGCL + S2,human,cold_pair,15
+arnoldi_s2,ArnoldiGCL + S2,human,cold_protein,15
+arnoldi_s2,ArnoldiGCL + S2,human,random,15
+arnoldi_v4,ArnoldiGCL without S1/S2,bindingdb,cold_drug,15
+arnoldi_v4,ArnoldiGCL without S1/S2,bindingdb,cold_pair,15
+arnoldi_v4,ArnoldiGCL without S1/S2,bindingdb,cold_protein,15
+arnoldi_v4,ArnoldiGCL without S1/S2,bindingdb,random,15
+arnoldi_v4,ArnoldiGCL without S1/S2,biosnap,cold_drug,15
+arnoldi_v4,ArnoldiGCL without S1/S2,biosnap,cold_pair,15
+arnoldi_v4,ArnoldiGCL without S1/S2,biosnap,cold_protein,15
+arnoldi_v4,ArnoldiGCL without S1/S2,biosnap,random,15
+arnoldi_v4,ArnoldiGCL without S1/S2,human,cold_drug,15
+arnoldi_v4,ArnoldiGCL without S1/S2,human,cold_pair,15
+arnoldi_v4,ArnoldiGCL without S1/S2,human,cold_protein,15
+arnoldi_v4,ArnoldiGCL without S1/S2,human,random,15
+colddti,ColdDTI-inspired threshold GCN,bindingdb,cold_drug,15
+colddti,ColdDTI-inspired threshold GCN,bindingdb,cold_pair,15
+colddti,ColdDTI-inspired threshold GCN,bindingdb,cold_protein,15
+colddti,ColdDTI-inspired threshold GCN,bindingdb,random,15
+colddti,ColdDTI-inspired threshold GCN,biosnap,cold_drug,15
+colddti,ColdDTI-inspired threshold GCN,biosnap,cold_pair,15
+colddti,ColdDTI-inspired threshold GCN,biosnap,cold_protein,15
+colddti,ColdDTI-inspired threshold GCN,biosnap,random,15
+colddti,ColdDTI-inspired threshold GCN,human,cold_drug,15
+colddti,ColdDTI-inspired threshold GCN,human,cold_pair,15
+colddti,ColdDTI-inspired threshold GCN,human,cold_protein,15
+colddti,ColdDTI-inspired threshold GCN,human,random,15
+drugban,DrugBAN,bindingdb,cold_drug,15
+drugban,DrugBAN,bindingdb,cold_pair,15
+drugban,DrugBAN,bindingdb,cold_protein,15
+drugban,DrugBAN,bindingdb,random,15
+drugban,DrugBAN,biosnap,cold_drug,15
+drugban,DrugBAN,biosnap,cold_pair,15
+drugban,DrugBAN,biosnap,cold_protein,15
+drugban,DrugBAN,biosnap,random,15
+drugban,DrugBAN,human,cold_drug,15
+drugban,DrugBAN,human,cold_pair,15
+drugban,DrugBAN,human,cold_protein,15
+drugban,DrugBAN,human,random,15
+gcn,GCN (leak-safe KNN graph),bindingdb,cold_drug,15
+gcn,GCN (leak-safe KNN graph),bindingdb,cold_pair,15
+gcn,GCN (leak-safe KNN graph),bindingdb,cold_protein,15
+gcn,GCN (leak-safe KNN graph),bindingdb,random,15
+gcn,GCN (leak-safe KNN graph),biosnap,cold_drug,15
+gcn,GCN (leak-safe KNN graph),biosnap,cold_pair,15
+gcn,GCN (leak-safe KNN graph),biosnap,cold_protein,15
+gcn,GCN (leak-safe KNN graph),biosnap,random,15
+gcn,GCN (leak-safe KNN graph),human,cold_drug,15
+gcn,GCN (leak-safe KNN graph),human,cold_pair,15
+gcn,GCN (leak-safe KNN graph),human,cold_protein,15
+gcn,GCN (leak-safe KNN graph),human,random,15
+lr,Logistic regression (Morgan+ESM-2),bindingdb,cold_drug,15
+lr,Logistic regression (Morgan+ESM-2),bindingdb,cold_pair,15
+lr,Logistic regression (Morgan+ESM-2),bindingdb,cold_protein,15
+lr,Logistic regression (Morgan+ESM-2),bindingdb,random,15
+lr,Logistic regression (Morgan+ESM-2),biosnap,cold_drug,15
+lr,Logistic regression (Morgan+ESM-2),biosnap,cold_pair,15
+lr,Logistic regression (Morgan+ESM-2),biosnap,cold_protein,15
+lr,Logistic regression (Morgan+ESM-2),biosnap,random,15
+lr,Logistic regression (Morgan+ESM-2),human,cold_drug,15
+lr,Logistic regression (Morgan+ESM-2),human,cold_pair,15
+lr,Logistic regression (Morgan+ESM-2),human,cold_protein,15
+lr,Logistic regression (Morgan+ESM-2),human,random,15
+mlp,MLP (Morgan+ESM-2),bindingdb,cold_drug,15
+mlp,MLP (Morgan+ESM-2),bindingdb,cold_pair,15
+mlp,MLP (Morgan+ESM-2),bindingdb,cold_protein,15
+mlp,MLP (Morgan+ESM-2),bindingdb,random,15
+mlp,MLP (Morgan+ESM-2),biosnap,cold_drug,15
+mlp,MLP (Morgan+ESM-2),biosnap,cold_pair,15
+mlp,MLP (Morgan+ESM-2),biosnap,cold_protein,15
+mlp,MLP (Morgan+ESM-2),biosnap,random,15
+mlp,MLP (Morgan+ESM-2),human,cold_drug,15
+mlp,MLP (Morgan+ESM-2),human,cold_pair,15
+mlp,MLP (Morgan+ESM-2),human,cold_protein,15
+mlp,MLP (Morgan+ESM-2),human,random,15

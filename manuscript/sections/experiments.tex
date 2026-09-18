@@ -1,0 +1,117 @@
+\section{Experimental protocol}
+
+\subsection{Datasets and frozen evaluation splits}
+We evaluate BioSNAP, Human and BindingDB under four scenarios: random,
+cold-drug, cold-protein and cold-pair splits. Each scenario uses three fixed
+random seeds and five outer folds, yielding 15 held-out evaluations per
+dataset--scenario--method combination. Within each outer training partition,
+approximately 10\% of eligible training positives are reserved for model
+selection. For cold-drug and cold-protein splits, validation and test entities
+are disjoint from training entities. For cold-pair splits, train, validation
+and test positives are sampled from disjoint diagonal drug--protein blocks;
+off-block pairs are not evaluated.
+
+The three local \texttt{full.csv} files were verified as exact Git-blob matches
+to the pinned DrugBAN dataset snapshot (commit
+\texttt{9923f8c99959e00263103ff9ac61ba0eaccc8e02}). Its dataset documentation
+identifies BindingDB, BioSNAP as distributed by MolTrans, and Human as
+distributed by TransformerCPI \cite{bai2023drugban,liu2007bindingdb,huang2021moltrans,chen2020transformercpi}.
+The generated dataset manifest records this source snapshot, byte-level
+checksums and the observed input schema for every run.
+
+For every partition, up to 10 unique unannotated pairs were sampled per
+positive without replacement. Test and validation negatives were allocated
+before training negatives to make held-out samples invariant to later
+training-set changes. In unusually dense blocks with fewer available unique
+negatives, all available unique negatives were used and the realized partition
+size was retained in the fold-level result record.
+
+\subsection{Realized benchmark coverage}
+The completed release contains 180 frozen split definitions and 1,800
+formal result records. This corresponds to 3 datasets, 4 split scenarios,
+10 model variants and 15 seed--fold evaluations for every
+dataset--scenario--method combination. All expected records passed the
+release audit, and no dataset--scenario--method group had missing folds.
+The realized test-set sizes were $30,426 \pm 0$ pairs for BioSNAP Random,
+$5,793 \pm 6$ pairs for Human Random and $45,483 \pm 5$ pairs for
+BindingDB Random. Under cold-pair evaluation, the corresponding test-set
+sizes were $6,173 \pm 864$, $1,168 \pm 411$ and $9,107 \pm 1,732$ pairs,
+respectively. The larger variation in the cold-start settings reflects the
+number of eligible entities and unannotated drug--protein pairs available
+within each frozen partition.
+
+Across the complete benchmark, the mean number of test positives per fold
+was $2,766 \pm 0$ for BioSNAP Random, $527 \pm 1$ for Human Random and
+$4,135 \pm 0$ for BindingDB Random. In the cold-pair setting, the
+corresponding values were $561 \pm 79$, $106 \pm 37$ and $828 \pm 157$.
+These realized counts, together with the train and validation counts for
+every dataset and split, are provided in Table~\ref{tab:fold-sizes} and in
+the accompanying fold-level source-data CSV.
+
+\subsection{Comparator families}
+Table~\ref{tab:comparators} distinguishes feature-only, graph-based,
+bilinear-attention and ablation controls. All rows use exactly the same frozen
+positive partitions and partition-specific negative examples. ``Threshold GCN''
+is a comparator implemented with the specified 0.3 within-type similarity
+threshold; it is not presented as a full reproduction of an external method.
+The panel is intended for controlled matched-partition comparisons rather than
+an exhaustive reproduction of every published DTI method; conclusions are
+therefore restricted to this benchmark.
+
+\begin{table}[t]
+\centering
+\scriptsize
+\begin{tabular}{p{0.17\textwidth}p{0.25\textwidth}p{0.46\textwidth}}
+\toprule
+Family & Model & Information available to the model \\
+\midrule
+Feature-only & Logistic regression & Concatenated Morgan and ESM-2 pair features. \\
+Feature-only & MLP & Concatenated Morgan and ESM-2 pair features. \\
+Graph-based & GCN & Fold-local positive DTI graph with top-10 within-type similarity neighbours. \\
+Graph-based & Threshold GCN & Fold-local positive DTI graph with within-type similarity edges above 0.3. \\
+Bilinear-attention & DrugBAN & Canonical molecular graph and protein-sequence inputs, trained on the same frozen pair partitions. \\
+Ablation & ArnoldiGCL w/o S1/S2; +S1; +S2; shuffled S1/S2 & The same fold-local ArnoldiGCL structural encoder, with the indicated side-information treatment. \\
+Full model & ArnoldiGCL-S1/S2 & Structural pair features, raw Morgan and ESM-2 features, and aligned seven-dimensional S1/S2 information. \\
+\bottomrule
+\end{tabular}
+\caption{Prespecified comparator families. All learning, graph construction
+and label-derived side information are restricted to the outer training fold.}
+\label{tab:comparators}
+\end{table}
+
+\subsection{Evaluation and statistical reporting}
+We report area under the receiver operating characteristic curve (AUC), area
+under the precision--recall curve (AUPR), F1 score and accuracy. Checkpoints
+were selected by validation AUC; F1 thresholds were selected by maximal
+validation F1 and applied once to the test partition. The primary tables will
+report mean $\pm$ sample standard deviation across 15 fixed seed--fold
+evaluations. Pairwise comparisons will be paired by identical seed--fold
+identity and summarized with effect sizes and two-sided Wilcoxon signed-rank
+statistics. Because folds sharing a random seed are not independent biological
+or experimental replicates, these $p$-values are descriptive summaries of
+paired fold differences rather than confirmatory population-level inference.
+For the complete family of reported descriptive comparisons, two-sided
+$p$-values will be adjusted using the Benjamini--Hochberg procedure; both raw
+and adjusted values will be provided as source data.
+
+\subsection{Ablation and robustness analyses}
+We compare the full S1/S2 model with a structural-only version, S1-only and
+S2-only variants, and a partition-wise shuffled S1/S2 control. The shuffled
+control distinguishes the presence of extra numerical inputs from alignment
+between side information and the evaluated drug--protein pair.
+
+\IfFileExists{generated/protocol_autogenerated.tex}{%
+  \input{generated/protocol_autogenerated}%
+}{%
+  \todo{Insert final dataset statistics from the completed artifacts.}%
+}
+
+\subsection{Compute environment and reproducibility}
+The principal benchmark was executed on NVIDIA GeForce RTX 4080 SUPER GPUs. Every
+result artifact records the dataset, scenario, seed, outer fold, split
+signature, validation criterion, test metrics and realized partition sizes.
+DrugBAN artifacts additionally record the fixed 100-epoch schedule, input
+preprocessing cache and TensorFloat-32 setting. The release-time environment
+manifest records the software versions, GPU/driver information and hashes of
+the key benchmark scripts. Aggregate wall-clock time is not reported because
+per-fold duration is not a standardized field in every result artifact.

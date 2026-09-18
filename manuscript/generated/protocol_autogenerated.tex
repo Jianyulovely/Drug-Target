@@ -1,0 +1,28 @@
+\subsection{Fold-level dataset sizes}
+Table~\ref{tab:fold-sizes} reports realized sample counts across the frozen folds. Counts may vary across cold-start folds because entities and eligible unannotated pairs are partition-specific.
+\begin{table}[t]
+\centering
+\scriptsize
+\begin{tabular}{llrrrr}
+\toprule
+Dataset & Split & Train pairs & Validation pairs & Test pairs & Test positives \\
+\midrule
+BioSNAP & Random & 109538 $\pm$ 0 & 12166 $\pm$ 0 & 30426 $\pm$ 0 & 2766 $\pm$ 0 \\
+BioSNAP & Cold drug & 109724 $\pm$ 1569 & 11980 $\pm$ 750 & 30426 $\pm$ 1336 & 2766 $\pm$ 121 \\
+BioSNAP & Cold protein & 109120 $\pm$ 4026 & 12584 $\pm$ 3126 & 30426 $\pm$ 3839 & 2766 $\pm$ 349 \\
+BioSNAP & Cold pair & 78327 $\pm$ 3469 & 1021 $\pm$ 315 & 6173 $\pm$ 864 & 561 $\pm$ 79 \\
+\midrule
+Human & Random & 20849 $\pm$ 6 & 2321 $\pm$ 0 & 5793 $\pm$ 6 & 527 $\pm$ 1 \\
+Human & Cold drug & 21054 $\pm$ 989 & 2116 $\pm$ 912 & 5793 $\pm$ 1194 & 527 $\pm$ 109 \\
+Human & Cold protein & 20789 $\pm$ 1099 & 2382 $\pm$ 843 & 5793 $\pm$ 1139 & 527 $\pm$ 104 \\
+Human & Cold pair & 15101 $\pm$ 1453 & 150 $\pm$ 112 & 1168 $\pm$ 411 & 106 $\pm$ 37 \\
+\midrule
+BindingDB & Random & 163737 $\pm$ 5 & 18194 $\pm$ 0 & 45483 $\pm$ 5 & 4135 $\pm$ 0 \\
+BindingDB & Cold drug & 163701 $\pm$ 700 & 18230 $\pm$ 466 & 45483 $\pm$ 685 & 4135 $\pm$ 62 \\
+BindingDB & Cold protein & 163327 $\pm$ 8143 & 18605 $\pm$ 4576 & 45483 $\pm$ 8652 & 4135 $\pm$ 787 \\
+BindingDB & Cold pair & 118036 $\pm$ 8799 & 1481 $\pm$ 538 & 9107 $\pm$ 1732 & 828 $\pm$ 157 \\
+\bottomrule
+\end{tabular}
+\caption{Realized fold sizes (mean $\pm$ sample standard deviation across 15 fixed seed--fold evaluations).}
+\label{tab:fold-sizes}
+\end{table}
